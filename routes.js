@@ -6,4 +6,9 @@ const express = require('express'),
     multer = require('./config/multerCloudinary')
 
 
-
+router
+	.get('/', (req, res) => res.send('Hello World'))
+	// Authentication Routes
+	.post('/register', AuthController.Register)
+	.post('/login', AuthController.Login)
+	
